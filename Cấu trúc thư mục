@@ -1,4 +1,5 @@
 my-chatgpt-backend/
+│
 ├── app.py
 ├── requirements.txt
 └── render.yaml (tùy chọn)
@@ -29,7 +30,6 @@ if __name__ == '__main__':
 flask
 flask-cors
 openai
-
 services:
   - type: web
     name: chatgpt-backend
