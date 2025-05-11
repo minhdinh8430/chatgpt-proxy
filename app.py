@@ -1,10 +1,8 @@
-from flask import Flask, request, jsonify
 from flask_cors import CORS
-import openai
-import os
 
 app = Flask(__name__)
-CORS(app)  # Cho phép tất cả origin, hoặc bạn có thể giới hạn domain
+CORS(app, resources={r"/*": {"origins": "*"}})  # Bật cho tất cả domain
+
 
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
